@@ -15,7 +15,7 @@
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-0lax{text-align:left;vertical-align:top}
 </style>
-<table class="tg"><thead>
+<table contenteditable="true" class="tg"><thead>
   <tr>
     <th class="tg-0lax"></th>
     <th class="tg-0lax"></th>
@@ -138,5 +138,36 @@
     <td class="tg-0lax"></td>
   </tr>
 </tbody></table>
+<button id="table-save">Save Text</button>
+
+<script>
+    document.getElementById("table-save").addEventListener('click', function(el) {
+        localStorage.setItem("table-text", document.getElementsByClassName("tg-0lax").innerHTML)
+    });
+
+    window.onload = function() {
+        var text = localStorage.getItem("table-text");
+        document.getElementsByClassName("tg-0lax").innerHTML = text;
+    }
+</script>
+
+
+
+<div id="example-one" contenteditable="true">
+    <p></p>
+</div>
+<button id="save">Save Text</button>
+
+<script>
+document.getElementById("save").addEventListener('click', function(el) {
+    localStorage.setItem("text", document.getElementById('example-one').innerHTML);
+});
+
+window.onload = function() {
+    var text = localStorage.getItem("text");
+    document.getElementById('example-one').innerHTML = text;
+}
+</script>
+
 </body>
 </html>
