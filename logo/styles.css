@@ -1,0 +1,11 @@
+h1 {
+    color:rgb(77, 9, 9);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 200px;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
