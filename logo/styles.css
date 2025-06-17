@@ -1,9 +1,19 @@
+.container {
+    display: flex;
+}
+
 h1 {
     color:rgb(77, 9, 9);
-    display: flex;
     justify-content: center;
     align-self: center;
     font-size: 200px;
+}
+
+.stripe {
+    height: 200px;
+    width: auto;
+    margin: 20px;
+    background-color:green;
 }
 
 body {
